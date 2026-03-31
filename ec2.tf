@@ -15,8 +15,6 @@ resource "aws_key_pair" "my_key_pair" {
   public_key = file("terraform-automate-key.pub")
 }
 
-
-
 ##vpc default##
 
 resource "aws_default_vpc" "default" {
