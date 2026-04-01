@@ -146,12 +146,15 @@ resource "aws_instance" "my_instance" {
   instance_type          = "t3.micro"
   key_name               = aws_key_pair.my_key_pair.key_name
   vpc_security_group_ids = [aws_security_group.my_security_group.id]
+
   #root stroage EBS
   root_block_device {
     volume_size = 10
     volume_type = "gp3"
   }
+
   tags = {
     Name = "terra-auto-server"
   }
+
 }
